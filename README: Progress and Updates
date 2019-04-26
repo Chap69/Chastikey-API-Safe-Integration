@@ -1,33 +1,44 @@
-Notes & Disclaimers
+Goals
+--------------
+In the first version of the safe, I am seeking functionality; therefore, my primary focus is developing a safe which can be locked/unlocked using the Chastikey API while minimizing the abilities of a lockee to open the safe early. Version 1 will not unlock the safe until the real version (if fake copies were made) of a lock has ended, eliminating the possibility of a lockee writing down or memorizing a combination. The safe is designed to be powered off for the majority of the time and should be powered on only to check to see if the safe is to be unlocked. 
+
+If I develop a later version, I may add functionalities which alert the keyholder if the computer detects that the safe is being tampered with (accelerometers, other force sensors). This second version would be designed to be powered on all the time and notify the KH if it has been powered off or disconnected from the network and for how long as these could be moment of tampering. 
+
+
+Setup
 ------------
 Safe's Gmail
 	You will need to create a gmail account to be used by the safe. You will need to enable IMAP in Gmail settings. You will also need to allow less secure apps to use this account. Links for details below.
 	Enabling IMAP (stop after step 1): https://support.google.com/mail/answer/7126229?p=BadCredentials&visit_id=636918567872219421-1659186675&rd=2#cantsignin
 	Allow less secure apps: https://support.google.com/accounts/answer/6010255
 
+Concerns
+-------------
+- The metal safe may act like a Faraday cage, preventing Wi-fi and bluetooth signals from being sent. If so a Raspberry Pi with an ethernet port and an external bluetooth dongle may need to be used.
+
+
 Updates
 -------------
 Gmail Notifications
 - Program now emails both KH and lockee notifications about safe unlocking/locking.
+Mechanism to trigger StatusCheck.py script to run?
+- I've decided the simplest, most reliable method for triggering StatusCheck.py is via powercycling the safe. 
 	
 
 Major Features I'm Working on
 -------------
-1. Safe Restart/Wifi disconnect Notifications
-	- Safe will notify KH and lockee if the safe's power or internet has been interrupted. I will try to find a way to the provide amount of time safe it off/disconnected. 
+1. Power On Notifications
+
 
 2. Emergency/Remote Interface
-	A simple way for a KH to communicate with the safe's computer, using Twitter, in the event Chastikey's server is unreachable.
+	A simple way for a KH to communicate with the safe's computer in the event Chastikey's server is unreachable. Not sure how yet...(thinking email)
 
 3. Headless Wi-fi Configuration
-	I still need to configure a version of BerryLan to run the R Pi. BerryLan will allow lockee to update safe's wifi network using bluetooth. This also prevents lockee from editing system files. 
-	 
-4. Mechanism to trigger StatusCheck.py script to run
-	StatusCheck.py doesn't need to run often, and scheduling run times seems wasteful. Options: 1.) A tweet sent from either the lockee's or kh's twitter signaling the safe to run the scrip. 2.)A simple physical button to trigger the script to run. 3.) Have the script run on startup. To check, power is cycled to the safe.  
+	I still need to configure a version of BerryLan to run the R Pi. BerryLan will allow lockee to update safe's wifi network using bluetooth. This also prevents lockee from interfacing directly with the computer. 
 
 
 Small Things I'd Like to Add
 ---------------
-- Safe's emails utilizing the real subject line of an email apart from just putting "Subject:" in the body. 
+- Safe's emails utilizing the real subject line of an email apart from just putting "Subject:" in the body of the email. 
  
 
