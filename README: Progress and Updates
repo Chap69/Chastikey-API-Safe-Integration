@@ -1,9 +1,9 @@
 Things I'm Working on
-Note: Because twitter has more strictle regulated it's API use, gmail will likely be used instead.
+Note: Because twitter has more strictle regulated it's API use, it could not easily be incorporated to deliver notifications. Gmail, instead, will be used to notify the KH. 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-1. Twitter notifications
+1. Gmail Notifications
 
-	Basically, the user will have created a twitter account for the safe. When the safe has a status update, it will post a tweet to this twitter account with the status update. So far, my goals for notifications are for 1.) when power to the safe is interrupted and restored (unplugged and plugged back in) and 2.) the computer has unlocked/locked the safe and 3.) when the safe has disconnected from or changed networks. If I feel like it, I made add notifications for tamper detection such as excessive movement of the safe, but these would require additional sensors. Also, if a lockee is willing to destroy a safe for release, this project isn't really for you. 
+	Basically, the user will have created a Gmail account for the safe. When the safe has a status update, it will send an email to the KH's email address with the status update. So far, my goals for notifications are for 1.) when power to the safe is interrupted and restored (unplugged and plugged back in) and 2.) the computer has unlocked/locked the safe and 3.) when the safe has disconnected from or changed networks. If I feel like it, I made add notifications for tamper detection such as excessive movement of the safe, but these would require additional sensors. Also, if a lockee is willing to destroy a safe for release, this project isn't really for you. 
 
 2. Emergency/Remote Interface
 	
@@ -19,4 +19,3 @@ Note: Because twitter has more strictle regulated it's API use, gmail will likel
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Everything down here, you can ignore. This is just to remind me what python libraries I called that need to be installed. 
 
-1.) python-twitter
