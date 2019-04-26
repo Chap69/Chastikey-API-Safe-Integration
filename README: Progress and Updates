@@ -31,15 +31,15 @@ Major Features I'm Working on
 
 
 2. Emergency/Remote Interface
-	In the unlikely event Chastikey's API can not be contacted, I plan to include a SSH of VNC for a KH to access the Pi remotely. The lockee would not know this login. For a further point of security, I may try to have the system enable a remote connection only when Chastikey cannot be reached. 
+	In the unlikely event Chastikey's API can not be contacted, I plan to include a SSH or VNC for a KH to access the Pi remotely. The lockee would not know this login. For a further point of security, I may try to have the system enable a remote connection only when Chastikey cannot be reached. 
 	
 
 3. Headless Wi-fi Configuration
-	I still need to configure a version of BerryLan to run the R Pi. BerryLan will allow lockee to update safe's wifi network using bluetooth. This also prevents lockee from interfacing directly with the computer. 
+	I still need to configure a version of BerryLan to run the R Pi. BerryLan will allow lockee to update safe's wifi network settings using bluetooth. This also prevents a lockee from interfacing directly with the computer during a lockup.
 
 
 Small Things I'd Like to Add
 ---------------
-- Safe's emails utilizing the real subject line of an email apart from just putting "Subject:" in the body of the email. 
+- Safe emails utilizing the real subject line of an email apart from just putting "Subject:" in the body of the email. 
  
 
