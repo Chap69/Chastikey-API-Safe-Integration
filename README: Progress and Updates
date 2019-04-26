@@ -1,21 +1,22 @@
-Things I'm Working on
-Note: Because twitter has more strictle regulated it's API use, it could not easily be incorporated to deliver notifications. Gmail, instead, will be used to notify the KH. 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-1. Gmail Notifications
+Updates
+-------------
+Gmail Notifications
+- Program now emails both KH and lockee notifications about safe unlocking/locking.
+	
 
-	Basically, the user will have created a Gmail account for the safe. When the safe has a status update, it will send an email to the KH's email address with the status update. So far, my goals for notifications are for 1.) when power to the safe is interrupted and restored (unplugged and plugged back in) and 2.) the computer has unlocked/locked the safe and 3.) when the safe has disconnected from or changed networks. If I feel like it, I made add notifications for tamper detection such as excessive movement of the safe, but these would require additional sensors. Also, if a lockee is willing to destroy a safe for release, this project isn't really for you. 
+Features I'm Working on
+-------------
+1. Safe Restart/Wifi disconnect Notifications
+	- Safe will notify KH and lockee if the safe's power or internet has been interrupted. I will try to find a way to the provide amount of time safe it off/disconnected. 
 
 2. Emergency/Remote Interface
-	
-	A simple way for a KH to communicate with the safe's computer in the event Chastikey's server is unreachable. I intend to also do this using twitter. The safe would monitor a specific twitter account set-up and controlled by the KH. In the event of an emergency, the KH can tweet a pre-set command to communicate with the safe.
+	A simple way for a KH to communicate with the safe's computer, using Twitter, in the event Chastikey's server is unreachable.
 
 3. Headless Wi-fi Configuration
+	I still need to configure a version of BerryLan to run the R Pi. BerryLan will allow lockee to update safe's wifi network using bluetooth. This also prevents lockee from editing system files. 
+	 
+4. Mechanism to trigger StatusCheck.py script to run
+	StatusCheck.py doesn't need to run often, and scheduling run times seems wasteful. Options: 1.) A tweet sent from either the lockee's or kh's twitter signaling the safe to run the scrip. 2.)A simple physical button to trigger the script to run. 3.) Have the script run on startup. To check, power is cycled to the safe.  
 	
-	The only way to interface with the safe's computer is over the internet. I intend to use BerryLan to allow for new wi-fi networks to be configured/reconfigured to reconnect the computer to the internet without exposing access to sensitive I/O ports that could be used for exploitation. In the event the safe's computer needs to be connected wifi connector, the lockee would be able to utilize a phone application to reconnect the safe to the internet w/o opening the safe or interacting directly with it. 
-
-4. Simple Button(tweet) to Check Lock Status?
-	
-	The locked/unlocked status of a Chastikey lock is not something that requires consistently querying the API. Furthermore, consistently checking the API for a status update creates uneccesary network traffic, power consumption, and requests to the Chastikey server. A simple button/trigger to query the Chastikey API may be added for when a lock is completed. For simplicity, this function is likely to be handled by a twitter account set-up by the lockee. The only function of this account would be to trigger the safe to check the API for lock status. 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Everything down here, you can ignore. This is just to remind me what python libraries I called that need to be installed. 
+ 
 
