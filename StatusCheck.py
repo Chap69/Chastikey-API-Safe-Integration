@@ -1,7 +1,7 @@
 import urllib.request #automatically performs SSL certificate authentication. I'm pretty sure at least...
 import smtplib #library used for sending notification emails from gmail
 
-#Replace with your info. Don't delete the ' ' marks! 
+#Replace the text in '' with your info. Don't delete the ' ' marks! 
 username = 'Chastikey_Username'
 lock_id = 'Chastikey_lockid_here'
 safe_gmail_address = 'gmail_for_safe_you_created@gmail.com'  
@@ -10,6 +10,7 @@ kh_email = 'kh_email@kholder.com'
 lockee_email = 'lockee@lockedup.com'
 lockee_name = 'Lockee_name'
 
+#DON'T CHANGE ANYTHING BELOW THIS LINE
 def kh_notify(message):
 	
 	sent_from = safe_gmail_address  
