@@ -4,7 +4,7 @@ Gmail Notifications
 - Program now emails both KH and lockee notifications about safe unlocking/locking.
 	
 
-Features I'm Working on
+Major Features I'm Working on
 -------------
 1. Safe Restart/Wifi disconnect Notifications
 	- Safe will notify KH and lockee if the safe's power or internet has been interrupted. I will try to find a way to the provide amount of time safe it off/disconnected. 
@@ -17,6 +17,10 @@ Features I'm Working on
 	 
 4. Mechanism to trigger StatusCheck.py script to run
 	StatusCheck.py doesn't need to run often, and scheduling run times seems wasteful. Options: 1.) A tweet sent from either the lockee's or kh's twitter signaling the safe to run the scrip. 2.)A simple physical button to trigger the script to run. 3.) Have the script run on startup. To check, power is cycled to the safe.  
-	
+
+
+Small Things I'd Like to Add
+---------------
+- Safe's emails utilizing the real subject line of an email apart from just putting "Subject:" in the body. 
  
 
