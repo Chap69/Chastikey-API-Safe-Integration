@@ -1,3 +1,10 @@
+Notes & Disclaimers
+------------
+Safe's Gmail
+	You will need to create a gmail account to be used by the safe. You will need to enable IMAP in Gmail settings. You will also need to allow less secure apps to use this account. Links for details below.
+	Enabling IMAP (stop after step 1): https://support.google.com/mail/answer/7126229?p=BadCredentials&visit_id=636918567872219421-1659186675&rd=2#cantsignin
+	Allow less secure apps: https://support.google.com/accounts/answer/6010255
+
 Updates
 -------------
 Gmail Notifications
